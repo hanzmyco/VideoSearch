@@ -1,11 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 project(Demo)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-
-include_directories(./)
-file(GLOB SOURCES ${PROJECT_SOURCE_DIR}/*.cpp)
-link_directories(${PROJECT_SOURCE_DIR})
-
-add_executable(${PROJECT_NAME} ${SOURCES})
-target_link_libraries(${PROJECT_NAME} TerrorClassifier)
+include_directories(${PROJECT_SOURCE_DIR}/deploy)
+set(APP_SRC main.cpp)
+add_executable(demo ${APP_SRC})
+target_link_libraries(demo libCClient)

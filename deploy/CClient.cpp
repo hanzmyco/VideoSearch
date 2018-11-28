@@ -2,16 +2,16 @@
 
 CClient::CClient(const std::string &strHost, int nPort, int nTimeout, int nConnNum)
 {
-  connStatus = Connect(strHost, nPort, nTimeout, nConnNum);
+  this->connStatus = Connect(strHost, nPort, nTimeout, nConnNum);
 }
 
 int CClient::Connect(const std::string &strHost, int nPort, int nTimeout, int nConnNum){
-  return redisCli.Initialize(strHost, nPort, nTimeout, nConnNum));
+  return this->redisCli.Initialize(strHost, nPort, nTimeout, nConnNum);
 }
 
-int Get(std::string strKey,str::string *strVal){
-  if (connStatu){
-    if((redisCli.Get(strKey, &strVal) == RC_SUCCESS)){
+int CClient::Get(std::string strKey,std::string *strVal){
+  if (this->connStatus){
+    if((this->redisCli.Get(strKey, strVal) == RC_SUCCESS)){
         return 0;
     }
     return 1;
@@ -21,6 +21,6 @@ int Get(std::string strKey,str::string *strVal){
   }
 }
 
-void Set(std::string strKey,std::string strValue){
-  redisCli.Set(strKey,strValue);
+void CClient::Set(std::string strKey,std::string strValue){
+  this->redisCli.Set(strKey,strValue);
 }
