@@ -7,7 +7,7 @@ int main(int argc, char **argv)
     CClient redisCli(strHost,6379,2,10);
     std::string videoUrl;
     std::string vector;
-    
+
 
 
 

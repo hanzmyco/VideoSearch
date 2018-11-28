@@ -1,0 +1,5 @@
+/Users/hanzhang/github/VideoSearch/build/CMakeFiles/rebuild_cache.dir
+/Users/hanzhang/github/VideoSearch/build/CMakeFiles/edit_cache.dir
+/Users/hanzhang/github/VideoSearch/build/deploy/CMakeFiles/rebuild_cache.dir
+/Users/hanzhang/github/VideoSearch/build/deploy/CMakeFiles/edit_cache.dir
+/Users/hanzhang/github/VideoSearch/build/deploy/CMakeFiles/demo.dir

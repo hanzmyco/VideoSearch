@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 2.6)
-project(Demo)
-include_directories(${PROJECT_SOURCE_DIR}/deploy)
-set(APP_SRC main.cpp)
-add_executable(demo ${APP_SRC})
-target_link_libraries(demo libCClient)
